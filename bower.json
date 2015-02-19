@@ -1,0 +1,27 @@
+{
+  "name": "helloreactstore",
+  "version": "1.0.0",
+  "authors": [
+    "Calvin Cheng <linchuan.cheng@gmail.com>"
+  ],
+  "description": "Bower dependencies for reactjs store",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react-router": "~0.12.0",
+    "normalize-scss": "~3.0.2",
+    "susy": "~2.2.2",
+    "react": "~0.12.2"
+  },
+  "devDependencies": {}
+}
