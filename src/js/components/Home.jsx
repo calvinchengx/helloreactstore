@@ -3,6 +3,8 @@
 
 var React = require('react');
 var ProductStore = require('../stores/ProductStore');
+var FluxCart = require('./FluxCart');
+var FluxProduct = require('./FluxProduct');
 
 function getCartState() {
   return {
@@ -10,27 +12,6 @@ function getCartState() {
     selectedProduct: ProductStore.getSelected()
   };
 }
-
-var FluxCart = React.createClass({
-  render: function() {
-    return (
-      <div>
-        Cart
-      </div>
-    );
-  }
-});
-
-var FluxProduct = React.createClass({
-  render: function() {
-    return (
-      <div>
-       Product 
-      </div>
-    );
-  }
-
-});
 
 var Home = React.createClass({
   getInitialState: function() {
