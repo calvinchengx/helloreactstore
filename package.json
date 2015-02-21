@@ -20,7 +20,7 @@
     "webpack-dev-server": "^1.7.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --content-base dist --hot true --progress --colors",
+    "dev": "webpack-dev-server --content-base dist --hot true --progress --colors --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Calvin Cheng",

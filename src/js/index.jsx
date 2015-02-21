@@ -8,7 +8,7 @@ require('../sass/styles.scss');
 
 var React = require('react');
 var Router = require('react-router');
-var routes = require('./routes');
+var routes = require('./components/Routes');
 
 var rootInstance = null;
 

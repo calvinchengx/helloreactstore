@@ -10,9 +10,9 @@ var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
 var Routes = Router.Routes;
 
-var App = require('./app');
-var Home = require('./home');
-var About = require('./about');
+var App = require('./App');
+var Home = require('./Home');
+var About = require('./About');
 
 var routes = (
     <Route path="/" name="app" handler={App}>       
