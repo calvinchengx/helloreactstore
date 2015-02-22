@@ -19,8 +19,8 @@ var FluxProduct = React.createClass({
     FluxCartActions.selectProduct(event.target.value);
   },
   render: function() {
-    //var ats = (this.props.selected.sku in this.props.cartitems) ?
-      //this.props.selected.inventory - this.props.cartitems[this.props.selected.sku].quantity : this.props.selected.inventory;
+    var ats = (this.props.selected.sku in this.props.cartitems) ?
+      this.props.selected.inventory - this.props.cartitems[this.props.selected.sku].quantity : this.props.selected.inventory;
     return (
       <div className="flux-product">
         <img src={'img/' + this.props.product.image}/>
