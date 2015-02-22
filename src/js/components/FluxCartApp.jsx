@@ -2,13 +2,15 @@
 
 var React = require('react');
 var ProductStore = require('../stores/ProductStore');
+var CartStore = require('../stores/CartStore');
 var FluxCart = require('./FluxCart');
 var FluxProduct = require('./FluxProduct');
 
 function getCartState() {
   return {
     product: ProductStore.getProduct(),
-    selectedProduct: ProductStore.getSelected()
+    selectedProduct: ProductStore.getSelected(),
+    cartItems: CartStore.getCartItems()
   };
 }
 
@@ -18,15 +20,17 @@ var FluxCartApp = React.createClass({
   },
   componentDidMount: function() {
     ProductStore.addChangeListener(this._onChange);
+    CartStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function() {
     ProductStore.removeChangeListener(this._onChange);
+    CartStore.removeChangeListener(this._onChange);
   },
   render: function() {
     return (
       <div className="flux-cart-app">
         Flux Cart App
-        <FluxCart />
+        <FluxCart products={this.state.cartItems}/>
         <FluxProduct product={this.state.product} selected={this.state.selectedProduct} />
       </div>
     );
