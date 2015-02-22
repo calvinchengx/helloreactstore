@@ -10,7 +10,8 @@ function getCartState() {
   return {
     product: ProductStore.getProduct(),
     selectedProduct: ProductStore.getSelected(),
-    cartItems: CartStore.getCartItems()
+    cartItems: CartStore.getCartItems(),
+    cartCount: CartStore.getCartCount()
   };
 }
 
