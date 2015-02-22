@@ -38,8 +38,22 @@ var CartStore = _.extend({}, EventEmitter.prototype, {
   },
   getCartCount: function() {
     return Object.keys(_products).length;
+  },
+  getCartTotal: function() {
+    var total = 0;
+    var totalPrice = _.chain(_products)
+      .mapObject(function(v) { return v.price * v.quantity; })
+      .reduce(function(a, b) { return a + b; })
+      .value();
+    if (typeof totalPrice !== 'undefined') {
+      total = total + totalPrice;
+    }
+    console.log('CartStore.getCartTotal: ' + total.toFixed(2));
+    return total.toFixed(2);
+  },
+  getCartVisible: function() {
+    return _cartVisible;
   }
-
 
 });
 

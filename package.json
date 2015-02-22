@@ -4,7 +4,7 @@
   "description": "A reactjs store",
   "dependencies": {
     "flux": "^2.0.1",
-    "underscore": "^1.7.0"
+    "underscore": "^1.8.1"
   },
   "devDependencies": {
     "bower-webpack-plugin": "^0.1.6",
