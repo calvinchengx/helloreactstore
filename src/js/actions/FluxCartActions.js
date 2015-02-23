@@ -24,6 +24,13 @@ var FluxCartActions = {
       sku: sku,
       update: update
     });
+  },
+  updateCartVisible: function(cartVisible) {
+    console.log('FluxCartActions.updateCartVisible ' + cartVisible);
+    AppDispatcher.handleAction({
+      actionType: 'CART_VISIBLE',
+      cartVisible: cartVisible
+    });
   }
 
 };

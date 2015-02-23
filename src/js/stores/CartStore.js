@@ -66,6 +66,9 @@ AppDispatcher.register(function(payload) {
       console.log('CartStore dispatcher CART_ADD');
       add(action.sku, action.update);
       break;
+    case 'CART_VISIBLE':
+      setCartVisible(action.cartVisible);
+      break;
     default:
       return true;
   }
