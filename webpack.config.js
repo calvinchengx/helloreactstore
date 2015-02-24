@@ -2,7 +2,7 @@
 
 var nfs = require('node-fs');
 var underscore = require('underscore');
-var projDirs = ['src/sass', 'src/css', 'src/js', 'src/img', 'dist/css', 'dist/js', 'dist/img'];
+var projDirs = ['src/sass', 'src/css', 'src/js', 'src/img', 'dist'];
 underscore.each(projDirs, function(dir) {
   nfs.mkdirSync(dir, '0755', true);
 });

@@ -1,4 +1,4 @@
-# Example set-up for reactjs + npm + webpack + react-hot-reload for public reference
+# Example set-up for reactjs + npm + webpack + react-hot-reload with flux
 
 Simply git clone and run `start.sh`.
 
@@ -15,7 +15,7 @@ Open app at [http://localhost:8080](http://localhost:8080) and enjoy.
 ## Notes
 
 * Source code is located in the `/src` directory.
-* The webpack-dev-server (invoked via `gulp`) sends modified source code to `/dist` directory and `/dist` is the base directory from which we run our dev server.
+* `/dist` contains only `index.html`
 
 ## TODO
 
